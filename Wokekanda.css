@@ -14,3 +14,42 @@ h2{
     color: rgb(155, 26, 26);
 }
 
+#Intro_Nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+#Intro_Nav li{
+    display: inline;
+    padding:10px;
+        
+}
+
+ul li a:link, ul li a:visited{
+    color: rgb(155, 26, 26);
+    border-bottom: none;
+    font-weight: bold;
+}
+
+ul li.selected{
+    background-color: black;
+    padding:10px;
+    
+}
+
+#Intro_Video{
+    padding-left: 35px;
+}
+
+footer{
+
+    color:  rgb(155, 26, 26);
+    text-align: center;
+    margin: 10px;
+    font-size: 90%;
+    padding-top: 20px;
+
+
+
+}
+]
