@@ -1,1 +1,3 @@
 .wokanda
+*.pyc
+__pycache__/*.pyc

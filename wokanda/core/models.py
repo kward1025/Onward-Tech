@@ -12,6 +12,7 @@ class Category(models.Model):
 class Nominee(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     title = models.CharField(max_length=300)
+    creator = models.CharField(max_length=300, null=True)
     year_made = models.IntegerField()
     reason_for_nomination = models.TextField(blank=True, null=True, default=None)
     votes = models.IntegerField(default=0)
