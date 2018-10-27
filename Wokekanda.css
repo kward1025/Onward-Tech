@@ -154,3 +154,15 @@ aside{
     color: ivory;
     
 }
+#Nominee_Vote{
+    position: relative;
+    bottom: 40px;
+}
+
+#Vote_Button{
+    width: 200px;
+    height: 50px;
+    background-color:  rgb(155, 26, 26);
+    color: ivory;
+    font-size: 13px;
+}
