@@ -21,6 +21,7 @@ h1{
 h2{
     color: rgb(155, 26, 26);
     text-decoration: underline solid green;
+    text-align: center;
 }
 
 #Nav ul{
@@ -32,20 +33,26 @@ h2{
 #Nav li{
     display: inline;
     padding:10px;
+    color:ivory;
         
 }
+#Nav a:hover{
+    color: green;
+}
 
-ul li a:link, ul li a:visited{
+    
+ul li a:visited, ul li a:link{
     color: rgb(155, 26, 26);
     border-bottom: none;
     font-weight: bold;
 }
-
 ul li.selected{
     background-color:green;
+    color: ivory;
     padding:10px;
-    
 }
+
+
 
 #Footer_Intro{
     position: absolute;
@@ -59,11 +66,12 @@ ul li.selected{
 }
 
 #All_Footers{
-    
+    position: absolute;
     color:  rgb(155, 26, 26);
     text-align: center;
     font-size: 90%;
     padding-bottom: 20px;
+    left: 25%;
     
 }
 
@@ -170,13 +178,13 @@ aside{
 Form{
     display: table;
     padding: 10px;
-    border: solid  rgb(155, 26, 26); 
+    border: solid rgb(155, 26, 26); 
     background-color: black;
     color: ivory;
     position: relative;
     top:50%;
     left:30%;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 30px
     
     
@@ -185,22 +193,54 @@ Form{
 form textarea{
     width: 500px;
     height:200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
     
 }
 
 div.tableRow{
     display:table-row;
+    width: 200px
    
 }
+
 
 div.tableRow p{
     display: table-cell;
     vertical-align: top;
     padding: 10px;
     text-align: left;
+    
 }
+
+
 
 #tableContainer_Nominate{
     text-align: center;
     margin-top: 50px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding:8px 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=number] {
+    width: 15%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+} 
+#Nom_Direction{
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 90px;
+    padding-left: 60px;
+    font-weight: normal;
 }
