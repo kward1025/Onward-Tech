@@ -30,6 +30,11 @@ h2{
     padding-top: 30px;
 }
 
+#Nav{
+    background-color: black;
+    padding-bottom: 30px;
+}
+
 #Nav ul li{
     display: inline;
     padding:10px;
@@ -49,7 +54,7 @@ h2{
 #Nav a{
     border-bottom: none;
     font-weight: bold;
-    color:red;
+    color:rgb(155, 26, 26);
 }
 
 
