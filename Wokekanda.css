@@ -30,29 +30,48 @@ h2{
     padding-top: 30px;
 }
 
-#Nav li{
+#Nav ul li{
     display: inline;
     padding:10px;
-    color:ivory;
+    color:rgb(155, 26, 26);
         
 }
 #Nav a:hover{
     color: green;
 }
 
-    
-ul li a:visited, ul li a:link{
-    color: rgb(155, 26, 26);
-    border-bottom: none;
-    font-weight: bold;
-}
 ul li.selected{
     background-color:green;
     color: ivory;
     padding:10px;
 }
+ul li a:visited, ul li a:link{
+    color: rgb(155, 26, 26);
+    border-bottom: none;
+    font-weight: bold;
+}
 
 
+
+#Nav_Category ul{
+    list-style-type: none;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+}  
+
+#Nav_Category li{
+    display: inline;
+    padding:90px;
+    color: green;
+    border-bottom: none;
+    font-weight: bold;
+}
+#Nav_Category ul li.selected{
+    background-color: rgb(155, 26, 26);
+    padding: 10px;
+    color: ivory;
+}
 
 #Footer_Intro{
     position: absolute;
@@ -165,6 +184,8 @@ aside{
 #Nominee_Vote{
     position: relative;
     bottom: 40px;
+    margin-left: 100px;
+
 }
 
 #Vote_Button{
@@ -173,6 +194,7 @@ aside{
     background-color:  rgb(155, 26, 26);
     color: ivory;
     font-size: 13px;
+    
 }
 
 Form{
@@ -216,10 +238,12 @@ div.tableRow p{
 
 
 
-#tableContainer_Nominate{
+#tableContainer_Nominate, {
     text-align: center;
     margin-top: 50px;
 }
+
+
 
 input[type=text] {
     width: 100%;
