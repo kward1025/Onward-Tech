@@ -41,15 +41,15 @@ h2{
     color: green;
 }
 
-ul li.selected{
+#Nav ul li.selected, #Nav ul li.selected a{
     background-color:green;
     color: ivory;
     padding:10px;
 }
-ul li a:visited, ul li a:link{
-    color: rgb(155, 26, 26);
+#Nav a{
     border-bottom: none;
     font-weight: bold;
+    color:red;
 }
 
 
