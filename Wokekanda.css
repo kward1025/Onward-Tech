@@ -33,7 +33,8 @@ h2{
 #Nav ul li{
     display: inline;
     padding:10px;
-    color:rgb(155, 26, 26);
+    color:ivory
+    
         
 }
 #Nav a:hover{
@@ -50,7 +51,6 @@ ul li a:visited, ul li a:link{
     border-bottom: none;
     font-weight: bold;
 }
-
 
 
 #Nav_Category ul{
