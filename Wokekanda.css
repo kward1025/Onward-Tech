@@ -67,14 +67,15 @@ h2{
 
 #Nav_Category li{
     display: inline;
-    padding:90px;
+    margin:30px;
     color: green;
     border-bottom: none;
     font-weight: bold;
 }
 #Nav_Category ul li.selected{
     background-color: rgb(155, 26, 26);
-    padding: 10px;
+    margin: 30px;
+    padding:10px;
     color: ivory;
 }
 
@@ -285,6 +286,6 @@ input[type=number] {
 }
 
 
-#tableContainer_Categroy{
-    display:inline;
+#tableContainer_Category{
+    text-align: center;
 }
