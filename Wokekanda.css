@@ -270,11 +270,7 @@ input[type=number] {
 }
 
 .Category_row{
-
-    display: inline-block;
-    
-    
-    
+    display: inline-table;
 }
 
 .Category_Nominee{
@@ -285,8 +281,10 @@ input[type=number] {
     margin: 20px;
     text-align: center;
     background-color: rgb(155, 26, 26);
-    
+    display: inline-block;
 }
 
 
-
+#tableContainer_Categroy{
+    display:inline;
+}
