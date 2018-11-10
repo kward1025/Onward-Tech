@@ -289,3 +289,20 @@ input[type=number] {
 #tableContainer_Category{
     text-align: center;
 }
+
+#Timeline{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.bubbles{
+    background-color: green;
+    border-radius: 100%;
+    height:50px;
+    width:50px;
+    display:inline-block;
+}
+.bar{
+    height:10px;
+    background-color: black;
+}
