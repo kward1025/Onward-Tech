@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+        {% block content %}
+        <div id= "tableContainer_Category">
+
+            <nav id= "Nav_Category">
+                <ul>
+                    <li>Television</li>
+                    <li class= "selected">Film</li>
+                    <li>Music</li>
+                    <li>Radio</li>
+                    <li>Poetry</li>
+                </ul>
+
+            </nav>
+            <div id="Timeline">
+                <div class="bar">
+                    <div class="bubbles">1950's</div>
+                    <div class="bubbles">1960's</div>
+                    <div class="bubbles">1970's</div>
+                    <div class="bubbles">1980's</div>
+                    <div class="bubbles_selected">1990's</div>
+                    <div class="bubbles">2000's</div>
+                    <div class="bubbles">2010's</div>
+                </div>
+            </div>
+            <div class=Category_row>
+                <div class=Category_Nominee>
+                    <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
+                    <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            
+                </div> 
+
+                <div class=Category_Nominee>
+                        <img src="pics/Rosa Parks.jpeg" alt="pic of category nominee">
+                        <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                
+                </div> 
+
+                <div class=Category_Nominee>
+                        <img src="pics/Shirley Chisholm.jpeg" alt="pic of category nominee">
+                        <p> 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                
+                </div> 
+                <div class=Category_Nominee>
+                    <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
+                    <p> 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            
+                </div> 
+            </div>
+
+            <div class=Category_row>
+                    <div class=Category_Nominee>
+                            <img src="pics/Rosa Parks.jpeg" alt="pic of category nominee">
+                            <p>5 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    
+                    </div> 
+    
+                    <div class=Category_Nominee>
+                            <img src="pics/Shirley Chisholm.jpeg" alt="pic of category nominee">
+                            <p>6 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class=Category_Nominee>
+                        <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
+                        <p>7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+
+                    </div>
+                    
+            </div> 
+
+            <div class=Category_row>
+                    
+            </div>
+
+
+        </div>
+
+        
+
+            {% include "base_footer.html" %}
+        
+        {% endblock %}
+           
+    

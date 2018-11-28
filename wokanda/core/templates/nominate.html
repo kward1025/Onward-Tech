@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id= "tableContainer_Nominate">
+        <h2 id= "Nom_Direction">Submit Your Nomination Below</h2>
+        <form>
+                
+            <div class="tableRow">
+                <p>Categories:
+                <select name= "CATEGORY">
+                    <option value="Television">Television</option>
+                    <option value="Film">Film</option>
+                    <option value="Music">Music</option>
+                    <option value="Radio Show">Radio Show</option>
+                    <option value="Poetry">Poetry</option>
+                </select> </p>
+            </div>
+            <div class="tableRow">
+                <p>Title: <input type= "text" name= "Title"></p>
+            </div>
+            <div class="tableRow">
+                <p>Creator: <input type= "text" name= "Creator"></p>
+            </div>
+            <div class="tableRow">
+                <p>Year Created: <input type="number" name= "Year Created"></p>
+            </div>
+            <div class="tableRow">
+                <p>Reason for Nomination:<br>
+                    <textarea name="Comments" rows= "10" cols= "48"></textarea>
+                </p>
+            </div>
+            <div class="tableRow">
+                <p><input type="submit" value="Nominate"></p>
+            </div>
+
+        </form>
+        {% include "base_footer.html" %}
+    </div>
+{% endblock %}

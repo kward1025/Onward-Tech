@@ -18,5 +18,8 @@ from django.urls import path
 from wokanda.core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about', views.about),
+    path('category', views.category),
+    path('nominate', views.nominate),
     path('', views.home ),
 ]
