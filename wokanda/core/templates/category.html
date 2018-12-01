@@ -24,55 +24,17 @@
                     <div class="bubbles">2010's</div>
                 </div>
             </div>
+            {% for i in nominee_list %}
             <div class=Category_row>
-                <div class=Category_Nominee>
-                    <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
-                    <p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-            
-                </div> 
-
-                <div class=Category_Nominee>
-                        <img src="pics/Rosa Parks.jpeg" alt="pic of category nominee">
-                        <p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                
-                </div> 
-
-                <div class=Category_Nominee>
-                        <img src="pics/Shirley Chisholm.jpeg" alt="pic of category nominee">
-                        <p> 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                
-                </div> 
-                <div class=Category_Nominee>
-                    <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
-                    <p> 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-            
-                </div> 
-            </div>
-
-            <div class=Category_row>
-                    <div class=Category_Nominee>
-                            <img src="pics/Rosa Parks.jpeg" alt="pic of category nominee">
-                            <p>5 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    
-                    </div> 
-    
-                    <div class=Category_Nominee>
-                            <img src="pics/Shirley Chisholm.jpeg" alt="pic of category nominee">
-                            <p>6 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
+                {% for nominee in nominee_list[i] %}
                     <div class=Category_Nominee>
                         <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
-                        <p>7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <p>{{ nominee.title }} - {{nominee.creator}}</p>
+                    </div> 
+                {% endif %}
 
-                    </div>
-                    
-            </div> 
-
-            <div class=Category_row>
-                    
             </div>
-
-
+            {% endfor %}
         </div>
 
         
