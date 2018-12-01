@@ -18,4 +18,4 @@ class Nominee(models.Model):
     votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"Nominee:{self.title}-{self.year_made}"
+        return f"Nominee:{self.title}-{self.year_made} - {self.category.name}"

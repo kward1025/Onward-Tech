@@ -13,11 +13,11 @@ def about(request):
         "selected": "about"
     })
 
-def category(request):
-    def chunks(l, n):
+def chunks(l, n):
         for i in range(0, len(l), n):
             yield l[i:i + n]
-    
+
+def category(request):
     selected_category = Category.objects.get(name="Movies")
     selected_nominees = Nominee.objects.filter(category=selected_category, year_made__gte=1990, year_made__lte=1999)
     nominees_chunked = list(chunks(selected_nominees, 3))
@@ -26,6 +26,10 @@ def category(request):
         "selected": "category",
         "nominee_list": nominees_chunked
     })
+
+
+def query_nominees(request):
+    pass
 
 def nominate(request):
     return render(request, "nominate.html", {
