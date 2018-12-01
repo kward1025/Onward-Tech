@@ -18,7 +18,7 @@ def category(request):
         for i in range(0, len(l), n):
             yield l[i:i + n]
     
-    selected_category = Category.objects.get(name="Film")
+    selected_category = Category.objects.get(name="Movies")
     selected_nominees = Nominee.objects.filter(category=selected_category, year_made__gte=1990, year_made__lte=1999)
     nominees_chunked = list(chunks(selected_nominees, 3))
     return render(request, "category.html", {
