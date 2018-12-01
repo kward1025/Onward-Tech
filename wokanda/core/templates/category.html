@@ -24,9 +24,9 @@
                     <div class="bubbles">2010's</div>
                 </div>
             </div>
-            {% for i in nominee_list %}
+            {% for row in nominee_list %}
             <div class=Category_row>
-                {% for nominee in nominee_list[i] %}
+                {% for nominee in row %}
                     <div class=Category_Nominee>
                         <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
                         <p>{{ nominee.title }} - {{nominee.creator}}</p>
