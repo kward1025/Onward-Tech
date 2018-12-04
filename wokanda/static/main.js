@@ -14,5 +14,13 @@ $(function(){
       selectedDecade = $(e.target).html();
       console.log(selectedDecade);
    })
+
+   $.get("/query_nominees", 
+         {category: selectedCategory, decade: selectedDecade}
+      ).then((res) => {
+         console.log(res);
+      }, (err) => {
+         console.log(err);
+      });
 })
 

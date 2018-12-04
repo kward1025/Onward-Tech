@@ -11,6 +11,7 @@ class Category(models.Model):
 # Create your models here.
 class Nominee(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    photo = models.ImageField(null=True)
     title = models.CharField(max_length=300)
     creator = models.CharField(max_length=300, null=True)
     year_made = models.IntegerField()
