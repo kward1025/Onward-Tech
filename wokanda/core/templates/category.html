@@ -28,7 +28,7 @@
             <div class=Category_row>
                 {% for nominee in row %}
                     <div class=Category_Nominee>
-                        <img src="pics/Angela Davis.jpeg" alt="pic of category nominee">
+                        <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}">
                         <p>{{ nominee.title }} - {{nominee.creator}}</p>
                     </div> 
                 {% endfor %}
