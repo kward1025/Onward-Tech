@@ -271,7 +271,7 @@ input[type=number] {
 }
 
 .Category_row{
-    display: inline-table;
+    display: inline-block;
 }
 
 .Category_Nominee{
