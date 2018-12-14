@@ -7,7 +7,7 @@ $(function(){
       $("#Nav_Category ul li.selected").removeClass("selected") 
       $(e.target).addClass("selected");
       selectedCategory = $(e.target).html();
-      first_load = false;
+      first_load = true;
    })
 
    $("#Timeline .bar .bubbles").on("click", function(e){
