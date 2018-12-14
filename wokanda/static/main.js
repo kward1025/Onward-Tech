@@ -13,7 +13,7 @@ $(function(){
 
    $("#Timeline .bar .bubbles").on("click", function(e){
       console.log(e.target);
-      selectedDecade = $(e.target).html();
+      selectedDecade = $(e.target).html().substring(0,4);
       var prev = $("#Timeline .bar .bubbles_selected").removeClass("bubbles_selected");
       prev.addClass("bubbles");
       $(e.target).addClass("bubbles_selected");
