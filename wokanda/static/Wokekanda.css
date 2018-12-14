@@ -71,6 +71,7 @@ h2{
     color: green;
     border-bottom: none;
     font-weight: bold;
+    cursor: pointer;
 }
 #Nav_Category ul li.selected{
     background-color: rgb(155, 26, 26);
