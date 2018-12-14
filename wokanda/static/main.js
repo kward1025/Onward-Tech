@@ -8,6 +8,7 @@ $(function(){
       $(e.target).addClass("selected");
       selectedCategory = $(e.target).html();
       first_load = false;
+      getNominees(first_load);
    })
 
    $("#Timeline .bar .bubbles").on("click", function(e){
@@ -17,20 +18,23 @@ $(function(){
       prev.addClass("bubbles");
       $(e.target).addClass("bubbles_selected");
       first_load = false;
+      getNominees(first_load);
    })
 
 
    console.log(first_load);
-   if(first_load == false){
-      console.log(selectedCategory);
-      console.log(selectedDecade);
-      $.get("/query_nominees", 
-            {category: selectedCategory, decade: selectedDecade}
-         ).then((res) => {
-            console.log(res);
-         }, (err) => {
-            console.log(err);
-      });
+   function getNominees(first_load){
+      if(first_load == false){
+         console.log(selectedCategory);
+         console.log(selectedDecade);
+         $.get("/query_nominees", 
+               {category: selectedCategory, decade: selectedDecade}
+            ).then((res) => {
+               console.log(res);
+            }, (err) => {
+               console.log(err);
+         });
+      }
    }
 });
 
