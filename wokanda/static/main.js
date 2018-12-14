@@ -7,7 +7,7 @@ $(function(){
       $("#Nav_Category ul li.selected").removeClass("selected") 
       $(e.target).addClass("selected");
       selectedCategory = $(e.target).html();
-      first_load = true;
+      first_load = false;
    })
 
    $("#Timeline .bar .bubbles").on("click", function(e){
@@ -19,7 +19,9 @@ $(function(){
       first_load = false;
    })
 
-   if(!first_load){
+
+   console.log(first_load);
+   if(first_load == false){
       console.log(selectedCategory);
       console.log(selectedDecade);
       $.get("/query_nominees", 
