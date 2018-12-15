@@ -31,11 +31,12 @@ def category(request):
 
 def query_nominees(request):
     category = request.GET.get('category', None)
-    year = request.GET.get('decade', None)
-    if category is None or year is None:
+    decade_start = request.GET.get('decade', None)
+    decade_end = str(int(decade_start) + 10)
+    if category is None or decade_start is None:
         nominees = []
     else:
-        nominees = Nominee.objects.filter(category = category, year_made__gte=year, year_made__lte=year + 10)
+        nominees = Nominee.objects.filter(category = category, year_made__gte=decade_start, year_made__lte=decade_end)
         nominees =  list(chunks(nominees, 3))
     return HttpResponse({
         "nominees": nominees
