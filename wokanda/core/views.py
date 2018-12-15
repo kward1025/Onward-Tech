@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from wokanda.core.models import Nominee, Category
+import json
 # Create your views here.
 def home(request):
     return render(request, "index.html", {
@@ -39,9 +40,9 @@ def query_nominees(request):
         category = Category.objects.get(name=category)
         nominees = Nominee.objects.filter(category = category, year_made__gte=decade_start, year_made__lte=decade_end)
         nominees =  list(chunks(nominees, 3))
-    return HttpResponse({
+    return HttpResponse(json.dumps({
         "nominees": nominees
-    }, content_type="application/json")
+    }), content_type="application/json")
 
 def nominate(request):
     return render(request, "nominate.html", {
