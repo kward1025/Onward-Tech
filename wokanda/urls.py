@@ -21,5 +21,6 @@ urlpatterns = [
     path('about', views.about),
     path('category', views.category),
     path('nominate', views.nominate),
+    path('query_nominees', views.query_nominees),
     path('', views.home ),
 ]
