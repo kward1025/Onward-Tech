@@ -36,7 +36,7 @@ def query_nominees(request):
     if category is None or decade_start is None:
         nominees = []
     else:
-        category = Category.objects.filter(name=category)
+        category = Category.objects.get(name=category)
         nominees = Nominee.objects.filter(category = category, year_made__gte=decade_start, year_made__lte=decade_end)
         nominees =  list(chunks(nominees, 3))
     return HttpResponse({
