@@ -31,7 +31,7 @@ $(function(){
                {category: selectedCategory, decade: selectedDecade}
             ).then((res) => {
                console.log(res);
-               $("#tableContainer_Category").insertAfter(res);
+               $("#Timeline").insertAfter(res);
             }, (err) => {
                console.log(err);
          });
