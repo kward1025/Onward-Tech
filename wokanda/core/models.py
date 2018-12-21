@@ -20,3 +20,10 @@ class Nominee(models.Model):
 
     def __str__(self):
         return f"Nominee:{self.title}-{self.year_made} - {self.category.name}"
+    
+    def to_json(self):
+        return {
+            "photo": self.photo.url,
+            "title": self.title,
+            "year_made": self.year_made
+        }

@@ -1,0 +1,11 @@
+{% for row in nominee_list %}
+            <div class=Category_row>
+                {% for nominee in row %}
+                    <div class=Category_Nominee>
+                        <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}" style="width:100%">
+                        <p>{{ nominee.title }} - {{nominee.creator}}</p>
+                    </div> 
+                {% endfor %}
+
+            </div>
+            {% endfor %}

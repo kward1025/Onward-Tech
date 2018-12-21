@@ -40,9 +40,8 @@ def query_nominees(request):
         category = Category.objects.get(name=category)
         nominees = Nominee.objects.filter(category = category, year_made__gte=decade_start, year_made__lte=decade_end)
         nominees =  list(chunks(nominees, 3))
-    return HttpResponse(json.dumps({
-        "nominees": nominees
-    }), content_type="application/json")
+
+    return render("nominee_component.html",{ "nominee_list": nominees})
 
 def nominate(request):
     return render(request, "nominate.html", {

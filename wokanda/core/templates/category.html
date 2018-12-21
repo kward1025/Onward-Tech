@@ -24,17 +24,7 @@
                     <div class="bubbles">2010's</div>
                 </div>
             </div>
-            {% for row in nominee_list %}
-            <div class=Category_row>
-                {% for nominee in row %}
-                    <div class=Category_Nominee>
-                        <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}" style="width:100%">
-                        <p>{{ nominee.title }} - {{nominee.creator}}</p>
-                    </div> 
-                {% endfor %}
-
-            </div>
-            {% endfor %}
+            {% include "nominee_component.html", {"nominees_list":nominees_list%}
         </div>
 
         
