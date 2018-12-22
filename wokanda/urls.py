@@ -23,7 +23,7 @@ urlpatterns = [
     path('nominate', views.nominate),
     path('query_nominees', views.query_nominees),
     path('nominee/<int:id>', views.nominee),
-    path('success/', views.success),
+    #path('success/', views.success),
     path('vote/<int:id>', views.vote_nominee),
     path('', views.home ),
 ]
