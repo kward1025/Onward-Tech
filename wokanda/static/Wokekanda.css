@@ -194,7 +194,7 @@ aside{
 }
 
 #Vote_Button{
-    width: 200px;
+    width: 100%;
     height: 50px;
     background-color:  rgb(155, 26, 26);
     color: ivory;
