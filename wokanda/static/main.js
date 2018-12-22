@@ -25,8 +25,7 @@ $(function(){
    console.log(first_load);
    function getNominees(first_load){
       if(first_load == false){
-         console.log(selectedCategory);
-         console.log(selectedDecade);
+         $(".returned").html("<img src='/loading.gif' />")
          $.get("/query_nominees", 
                {category: selectedCategory, decade: selectedDecade}
             ).then((res) => {
@@ -35,6 +34,8 @@ $(function(){
                $(".returned").html(res);
             }, (err) => {
                console.log(err);
+               $(".returned").html("");
+               alert("Something went wrong fetching the nominees! " + err );
          });
       }
    }

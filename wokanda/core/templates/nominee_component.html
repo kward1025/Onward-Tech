@@ -2,7 +2,9 @@
             <div class=Category_row>
                 {% for nominee in row %}
                     <div class=Category_Nominee>
+                        {% if nominee.photo != None %}
                         <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}" style="width:100%">
+                        {% endif %}
                         <p>{{ nominee.title }} - {{nominee.creator}}</p>
                     </div> 
                 {% endfor %}
