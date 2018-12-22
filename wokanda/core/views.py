@@ -58,6 +58,12 @@ def vote_nominee(request, id):
     })
 
 
+def success(request):
+    return render(request, "success.html", {
+        "title": "Wokanda Awards -- Success"
+    })
+
+
 def nominee(request, id):
     nominee = Nominee.objects.get(id=id)
     if nominee is None:
