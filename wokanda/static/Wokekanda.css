@@ -175,18 +175,19 @@ aside{
     position: relative;
 }
 
-#Nominee_pic_description{
+  
+#Nominee_pic_description {
     position: relative;
-    bottom: 80px;
+    /* bottom: 80px; */
     width: 50%;
     text-align: left;
-    left: 225px;
-    width: 700px;
-    background-color:black;
+    left: 25%;
+    width: 500px;
+    background-color: black;
     padding: 30px;
     color: ivory;
-    
 }
+
 #Nominee_Vote{
     position: relative;
     bottom: 40px;
