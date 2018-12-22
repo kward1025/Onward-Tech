@@ -3,6 +3,7 @@
 {% block content %}
     <div id= "tableContainer_Nominate">
         <h2 id= "Nom_Direction">Submit Your Nomination Below</h2>
+        <p>(All fields required)</p>
         <form action="/submit/" method="POST">
             {% csrf_token %}
             <div class="tableRow">
