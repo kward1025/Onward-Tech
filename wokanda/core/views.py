@@ -49,6 +49,11 @@ def nominate(request):
         "selected": "nominate"
     })
 
+def vote_nominee(request, id):
+    return render(request, "success.html", {
+        "title": "Wokanda Awards - Voted"
+    })
+
 
 def nominee(request, id):
     nominee = Nominee.objects.get(id=id)
