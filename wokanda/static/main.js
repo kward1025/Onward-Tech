@@ -25,7 +25,7 @@ $(function(){
    console.log(first_load);
    function getNominees(first_load){
       if(first_load == false){
-         $(".returned").html("<img src='/loading.gif' />")
+         $(".returned").html("<img src='/static/loading.gif' />")
          $.get("/query_nominees", 
                {category: selectedCategory, decade: selectedDecade}
             ).then((res) => {

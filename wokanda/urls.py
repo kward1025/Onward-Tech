@@ -22,5 +22,6 @@ urlpatterns = [
     path('category', views.category),
     path('nominate', views.nominate),
     path('query_nominees', views.query_nominees),
+    path('nominee/<int:id>', views.nominee),
     path('', views.home ),
 ]

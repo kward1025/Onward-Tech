@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from wokanda.core.models import Nominee, Category
 import json
 # Create your views here.
@@ -48,3 +48,10 @@ def nominate(request):
         "title": "Wokanda Awards - Nominate",
         "selected": "nominate"
     })
+
+
+def nominee(request, id):
+    nominee = Nominee.objects.get(id=id)
+    if nominee is None:
+        raise Http404
+    return render(request, "nominee.html", { "nominee": nominee })
