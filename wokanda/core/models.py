@@ -27,3 +27,4 @@ class Nominee(models.Model):
             "title": self.title,
             "year_made": self.year_made
         }
+

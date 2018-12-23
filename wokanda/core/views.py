@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse, Http404
 from wokanda.core.models import Nominee, Category
 import json
+from django.contrib import messages
+from django.shortcuts import redirect
+
 # Create your views here.
 def home(request):
     return render(request, "index.html", {
@@ -59,6 +62,17 @@ def vote_nominee(request, id):
 
 
 def success(request):
+    messages.add_message(request, messages.INFO, 'Thank you!')
+    if request.method == "POST":
+        info = request.POST
+        category = info.get("CATEGORY")
+        year = info.get("Year Created")
+        title = info.get("Title")
+        comments = info.get("Comments")
+        creator = info.get("Creator")
+        if year is None or title is None or comments is None or creator is None:
+            messages.add_message(request, messages.INFO, 'All fields are required! Please fill out.')
+            redirect("/nominate")
     return render(request, "success.html", {
         "title": "Wokanda Awards -- Success"
     })

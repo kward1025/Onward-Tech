@@ -4,6 +4,13 @@
     <div id= "tableContainer_Nominate">
         <h2 id= "Nom_Direction">Submit Your Nomination Below</h2>
         <p>(All fields required)</p>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="alert alert-danger">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         <form action="/submit/" method="POST">
             {% csrf_token %}
             <div class="tableRow">
