@@ -62,7 +62,6 @@ def vote_nominee(request, id):
 
 
 def success(request):
-    messages.add_message(request, messages.INFO, 'Thank you!')
     if request.method == "POST":
         info = request.POST
         category = info.get("CATEGORY")
