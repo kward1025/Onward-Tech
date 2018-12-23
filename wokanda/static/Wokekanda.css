@@ -243,6 +243,9 @@ div.tableRow p{
 #tableContainer_Nominate {
     text-align: center;
     margin-top: 50px;
+    width: 700px;
+    position: relative;
+    margin: 0 auto;
 }
 
 
