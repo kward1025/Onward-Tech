@@ -3,9 +3,11 @@
                 {% for nominee in row %}
                     <div class=Category_Nominee>
                         {% if nominee.photo != None %}
-                            <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}" style="width:100%">
+                            <a href="/nominee/{{nominee.id}}">
+                                <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}" style="width:100%">
+                            </a>
                         {% endif %}
-                        <p><a href="/nominee/{{ nominee.id }}">{{ nominee.title }} - {{ nominee.creator }}</a></p>
+                        <p><a href="/nominee/{{ nominee.id }}" style="color:ivory">{{ nominee.title }} - {{ nominee.creator }}</a></p>
                     </div> 
                 {% endfor %}
 
