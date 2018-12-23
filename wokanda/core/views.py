@@ -69,7 +69,7 @@ def success(request):
         title = info.get("Title")
         comments = info.get("Comments")
         creator = info.get("Creator")
-        if year is None or title is None or comments is None or creator is None:
+        if year is "" or title is "" or comments is "" or creator is "":
             messages.add_message(request, messages.ERROR, 'All fields are required! Please fill out.')
             redirect("/nominate")
         else:
