@@ -180,15 +180,13 @@ aside{
     margin: 0 auto;
     text-align: center;
     position: relative;
+    width:700px;
+    overflow: hidden;
 }
 
   
 #Nominee_pic_description {
     position: relative;
-    /* bottom: 80px; */
-    width: 50%;
-    text-align: left;
-    left: 25%;
     background-color: black;
     padding: 30px;
     color: ivory;
