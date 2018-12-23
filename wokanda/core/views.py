@@ -73,9 +73,9 @@ def success(request):
         if year is None or title is None or comments is None or creator is None:
             messages.add_message(request, messages.INFO, 'All fields are required! Please fill out.')
             redirect("/nominate")
-    return render(request, "success.html", {
-        "title": "Wokanda Awards -- Success"
-    })
+        return render(request, "success.html", {
+            "title": "Wokanda Awards -- Success"
+        })
 
 
 def nominee(request, id):
