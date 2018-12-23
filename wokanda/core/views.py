@@ -71,7 +71,7 @@ def success(request):
         creator = info.get("Creator")
         if year is "" or title is "" or comments is "" or creator is "":
             messages.add_message(request, messages.ERROR, 'All fields are required! Please fill out.')
-            redirect("/nominate")
+            return redirect("/nominate")
         else:
             return render(request, "success.html", {
                 "title": "Wokanda Awards -- Success"
