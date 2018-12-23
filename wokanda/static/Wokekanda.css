@@ -170,8 +170,8 @@ aside{
 }
 
 #tableContainer_Nominee{
+    margin: 0 auto;
     text-align: center;
-    overflow: hidden;
     position: relative;
 }
 
