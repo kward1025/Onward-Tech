@@ -45,6 +45,10 @@ $(function(){
       $(e.target).addClass("selected");
       selectedCategory = $(e.target).html();
       first_load = false;
+      var params = new URLSearchParams();
+      params.append("category", selectedCategory);
+      params.append("decade", selectedDecade);
+      window.location.search = params.toString();
       getNominees(first_load);
    })
 
@@ -55,6 +59,10 @@ $(function(){
       prev.addClass("bubbles");
       $(e.target).addClass("bubbles_selected");
       first_load = false;
+      var params = new URLSearchParams();
+      params.append("category", selectedCategory);
+      params.append("decade", selectedDecade);
+      window.location.search = params.toString();
       getNominees(first_load);
    })
 
