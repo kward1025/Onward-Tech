@@ -10,7 +10,7 @@ $(function(){
       }
 
       if('category' in keys && 'decade' in keys){
-         var menus = $("#Nav_Category ul li.selected");
+         var menus = $("#Nav_Category ul li");
          for(var i = 0; i < menus.length; i++){
             if(menus[i].innerText == keys['category']){
                $("#Nav_Category ul li.selected").removeClass("selected");
