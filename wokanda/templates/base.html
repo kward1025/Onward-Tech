@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+
+<html>
+    <head>
+
+        <meta charset= "UTF-8">
+        <link type="text/css" rel="stylesheet" href="{% static 'Wokekanda.css' %}">
+        <title> Woke-kanda Awards</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{% static 'main.js' %}"></script>
+    </head>
+
+    <body>
+
+            <h1> <img src="{% static 'pics/soaringblackpanther1.jpg' %}" width= "100px" height= "100px" alt="logo"> Welcome to the Woke-kanda Awards</h1>
+            
+            <nav id="Nav">
+                    <ul>
+                        <li {% if selected == "index" %} class="selected" {% endif %}><a href= "/">HOME</a></li>
+                        <li {% if selected == "about" %} class="selected" {% endif %}><a href="/about"> ABOUT</a></li>
+                        <li {% if selected == "category" %} class="selected" {% endif %}><a href="/category">CATEGORY</a></li>
+                        <li {% if selected == "nominate" %} class="selected" {% endif %}><a href="/nominate">NOMINATE</a></li>
+                    </ul>
+            </nav>
+            {% block content %}{% endblock %}
+
+            
+            
+        </body>
+
+</html>

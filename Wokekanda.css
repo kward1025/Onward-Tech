@@ -339,6 +339,8 @@ input[type=number] {
     top: -35x;
     margin-right: 80px;
     margin-left: 25px;
+    transform-origin: center;
+    transform: scale(2);
     cursor: pointer;
 
 }

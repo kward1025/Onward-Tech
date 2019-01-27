@@ -1,3 +1,5 @@
 .wokanda
 *.pyc
 __pycache__/*.pyc
+wokanda/__pycache__/*.pyc
+wokanda/__pycache__/*

@@ -1,0 +1,15 @@
+{% for row in nominee_list %}
+            <div class=Category_row>
+                {% for nominee in row %}
+                    <div class=Category_Nominee>
+                        {% if nominee.photo != None %}
+                            <a href="/nominee/{{nominee.id}}">
+                                <img src="{{nominee.photo.url}}" alt="{{ nominee.title }}" style="width:100%">
+                            </a>
+                        {% endif %}
+                        <p><a href="/nominee/{{ nominee.id }}" style="color:ivory">{{ nominee.title }} - {{ nominee.creator }}</a></p>
+                    </div> 
+                {% endfor %}
+
+            </div>
+            {% endfor %}

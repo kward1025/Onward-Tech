@@ -11,6 +11,7 @@ class Category(models.Model):
 # Create your models here.
 class Nominee(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    photo = models.ImageField(null=True)
     title = models.CharField(max_length=300)
     creator = models.CharField(max_length=300, null=True)
     year_made = models.IntegerField()
@@ -18,4 +19,12 @@ class Nominee(models.Model):
     votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"Nominee:{self.title}-{self.year_made}"
+        return f"Nominee:{self.title}-{self.year_made} - {self.category.name}"
+    
+    def to_json(self):
+        return {
+            "photo": self.photo.url,
+            "title": self.title,
+            "year_made": self.year_made
+        }
+

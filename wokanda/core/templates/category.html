@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+        {% block content %}
+        <div id= "tableContainer_Category">
+
+            <nav id= "Nav_Category">
+                <ul>
+                    <li>Television</li>
+                    <li class= "selected">Movies</li>
+                    <li>Music</li>
+                    <li>Radio</li>
+                    <li>Poetry</li>
+                </ul>
+
+            </nav>
+            <div id="Timeline">
+                <div class="bar">
+                    <div class="bubbles">1950's</div>
+                    <div class="bubbles">1960's</div>
+                    <div class="bubbles">1970's</div>
+                    <div class="bubbles">1980's</div>
+                    <div class="bubbles bubbles_selected">1990's</div>
+                    <div class="bubbles">2000's</div>
+                    <div class="bubbles">2010's</div>
+                </div>
+            </div>
+            <div class="returned">
+            {% include "nominee_component.html" with nominees_list=nominees_list %}
+            </div>
+        </div>
+
+        
+
+            {% include "base_footer.html" %}
+        
+        {% endblock %}
+           
+    

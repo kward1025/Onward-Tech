@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="tableContainer_About"> 
+        <div id="tableRow">
+            <section id="main">
+
+            <h2>Mission</h2><br>
+
+            <p>The Woke-kanda Awards pays homage to the creators of music, television, radio, film and poetry 
+                who produce and present "woke" content as it pertains to the disenfranchisement and social injustices inflicted upon people of the African diaspora. </p> <br>
+
+                <h2>Act I</h2> <br>
+
+                <p>Phase 1 of the awards allows website users to choose from 
+                a list of songs, movies, television shows and radio shows, and poetry pieces dating back to the 1950's. Users are allowd to vote,
+                once per catergory, for content they believe is the most "woke". Voting will begin on January 22 2019 until Sepember 22, 2019. 
+                Winners will be announced on October 1st of each year. </p> <br>
+
+                <h2>Act II</h2><br>
+
+                <p>Phase two of the awards will take place in the year 2020.  On January 22, 2020, voters will vote on content released in 2019 ONLY. All votes, moving forward, will take place annually and will be based on content from the previoius year ONLY.  
+                In this phase, a formal award ceremony will occur and recepients will be presented with tangible awards. </p> <br>
+            
+                <h2>Lorem Ipsum</h2><br>
+
+                <p> Lorem Ipsum Lorem ipsum dolor sit amet et delectus accommodare 
+                    his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentietLorem ipsum dolor
+                sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu.Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet
+                    Vidit dissentiet</p>
+
+            </section>
+            <aside>
+            <img class= "pic_right" src= "{% static 'pics/j.cole.jpg'%}" width= "250" height="150" alt= "J. Cole">
+            <img class= "Pic_left" src= "{% static 'pics/Viola-Davis.jpg' %}" width= "250" height= "150" alt= "Viola Davis">
+            <img class= "pic_right" src= "{% static 'pics/Denzel.jpg' %}" width= "250" height="150" alt= "Denzel Washington">
+            <img class= "pic_left" src= "{% static 'pics/maya-angelou.jpg' %}" width= "250" height= "150" alt= "Maya Angelou">
+            <img class= "pic_right" src= "{% static 'pics/jerryquickley.jpeg' %}" width= "250" height= "150" alt= "Jerry Quickley">
+                
+            </aside>
+        </div>   
+        {% include "base_footer.html" %}
+    </div>
+            
+{% endblock %}
