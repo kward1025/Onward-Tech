@@ -70,16 +70,20 @@
     display: block;
     width: 100px;
     background-color:none;
-    z-index: 0;
+    z-index: 1;
+    left: -33px;
     
 }
+
 
 #Dropdown_Spokenword{
     position: absolute;
     display: block;
     width: 100px;
     background-color:none;
-    z-index: 0;
+    z-index: 1;
+    left: -100;
+    
 
 }
 #Dropdown_Voiceover{
@@ -87,7 +91,7 @@
     display: block;
     width: 100px;
     background-color:none;
-    z-index: 0;
+    z-index: 1;
 }
 
 
