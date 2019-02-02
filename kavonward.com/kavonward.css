@@ -2,22 +2,24 @@
     list-style-type: none;
     text-align: center;
     padding-top: 30px;
+    display: inline;
 }
 
 #Nav{
-    background-color: tan;
-    padding-bottom: 30px;
+    background-color:rgb(170, 169, 169);
+    height: 100px;
+    line-height: 95px;
 }
 
 #Nav ul li{
     display: inline;
-    padding:10px;
-    color:rgb(201, 201, 181)
+    padding:30px;
+    color:rgb(201, 201, 181);
+    position: relative;
     
-        
 }
 #Nav a:hover{
-    color: rgb(80, 139, 80);
+    color:white;
 }
 
 #Nav ul li.selected, #Nav ul li.selected a{
@@ -53,26 +55,72 @@
     color: ivory;
 }
 
-#Footer_Intro{
-    position: absolute;
-    top: 88%;
-    left:25%;
-    color:  rgb(155, 26, 26);
-    text-align: center;
-    margin: 10px;
-    font-size: 90%;
-    padding-top: 20px;
+#Nav h1{
+    padding-right: 80px;
+    display: inline;
+    padding-left: 5px;
+    font-family: sans-serif;
+    font-style: oblique;
+    font: 59px bold;
+    margin: 0px;
 }
 
+#Dropdown_Acting{
+    position: absolute;
+    display: block;
+    width: 100px;
+    background-color:none;
+    z-index: 0;
+    
+}
+
+#Dropdown_Spokenword{
+    position: absolute;
+    display: block;
+    width: 100px;
+    background-color:none;
+    z-index: 0;
+
+}
+#Dropdown_Voiceover{
+    position: absolute;
+    display: block;
+    width: 100px;
+    background-color:none;
+    z-index: 0;
+}
+
+
+}
+body{
+    padding: 0px;
+    margin:0px;
+}
+
+
+
+
 #All_Footers{
-    color:  rgb(155, 26, 26);
+    color:gray;
     text-align: center;
     font-size: 90%;
     padding-bottom: 20px;
+    padding-top: 100%;
     
     
 }
 
 #Main_Headshot{
-    float: right;
+    float:right;
+    
+}
+
+#Kavons_Bio{
+    float: left;
+    margin-top: -1200px;
+    margin-right: 62%;
+    margin-left: 5px;
+    line-height: 27px;
+    word-spacing: 3px;
+    
 }
