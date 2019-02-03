@@ -107,6 +107,7 @@ usually happens when you do position absolute.
     display:none;
     top:37px;
     width:100px;
+    z-index:100;
 }
 .submenu li {
     padding-bottom:10px;
