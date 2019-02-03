@@ -126,9 +126,14 @@ usually happens when you do position absolute.
 .show-overflow{
     overflow:visible;
 }
-
-.bio {
+.current_events{
     width: 33%;
+    float: left;
+    margin-right: 23px;
+    margin-left: 20px;
+}
+.bio {
+    width: 85%;
     float: left;
     margin-right: 23px;
     margin-left: 20px;
