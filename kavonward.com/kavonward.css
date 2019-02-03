@@ -128,7 +128,7 @@ usually happens when you do position absolute.
 }
 
 .bio {
-    width: 37%;
+    width: 33%;
     float: left;
     margin-right: 23px;
     margin-left: 20px;
@@ -184,4 +184,12 @@ usually happens when you do position absolute.
 
 .contact-form img {
     margin-top: 30px;
+}
+
+.footer{
+    color:  grey;
+    text-align: center;
+    font-size: 90%;
+    padding-bottom: 20px;
+    padding-top: 30px;
 }
