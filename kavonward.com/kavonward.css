@@ -1,126 +1,186 @@
-#Nav ul{
-    list-style-type: none;
-    text-align: center;
-    padding-top: 30px;
-    display: inline;
+body{
+    padding:0px;
+    margin:0px;
+    font-family: 'Raleway', sans-serif;
 }
 
-#Nav{
-    background-color:rgb(170, 169, 169);
-    height: 100px;
-    line-height: 95px;
+.gray-bg {
+    background-color:#A1A3A1;
 }
 
-#Nav ul li{
-    display: inline;
-    padding:30px;
-    color:rgb(201, 201, 181);
-    position: relative;
-    
+.gray-text{
+    color:#A1A3A1;
 }
-#Nav a:hover{
+
+.white-bg {
+    background-color:white;
+}
+
+.white-text{
     color:white;
 }
 
-#Nav ul li.selected, #Nav ul li.selected a{
-    background-color:rgb(80, 139, 80);
-    color: ivory;
-    padding:10px;
-}
-#Nav a{
-    border-bottom: none;
-    font-weight: bold;
-    color:blue;
+.dark-blue-bg{
+    background-color: #1D38BB;
 }
 
-
-#Nav_Category ul{
-    list-style-type: none;
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 50px;
-}  
-
-#Nav_Category li{
-    display: inline;
-    margin:30px;
-    color: rgb(80, 139, 80);
-    border-bottom: none;
-    font-weight: bold;
-}
-#Nav_Category ul li.selected{
-    background-color: rgb(155, 26, 26);
-    margin: 30px;
-    padding:10px;
-    color: ivory;
+.dark-blue-text {
+    color:#1D38BB;
 }
 
-#Nav h1{
-    padding-right: 80px;
-    display: inline;
-    padding-left: 5px;
-    font-family: sans-serif;
-    font-style: oblique;
-    font: 59px bold;
-    margin: 0px;
+.light-blue-bg{
+    background-color: #245CB0;
 }
 
-#Dropdown_Acting{
-    position: absolute;
-    display: block;
-    width: 100px;
-    background-color:none;
-    z-index: 0;
-    
+.light-blue-text {
+    color:#245CB0;
 }
 
-#Dropdown_Spokenword{
-    position: absolute;
-    display: block;
-    width: 100px;
-    background-color:none;
-    z-index: 0;
-
+.orange-bg{
+    background-color: #CE8C4D;
 }
-#Dropdown_Voiceover{
-    position: absolute;
-    display: block;
-    width: 100px;
-    background-color:none;
-    z-index: 0;
+
+.orange-text {
+    color:#CE8C4D;
+}
+
+.top-bar h1{
+    font-family: 'Oxygen', sans-serif;
+    padding-top: 7px;
+    padding-left: 10px;
 }
 
 
-}
-body{
-    padding: 0px;
+
+.top-bar h1 {
     margin:0px;
+    float:left;
+    color:white;   
 }
 
-
-
-
-#All_Footers{
-    color:gray;
-    text-align: center;
-    font-size: 90%;
-    padding-bottom: 20px;
-    padding-top: 100%;
-    
-    
+/*
+    So a quick word about the menu stuff. 
+    The menu works because we have a main-menu class
+    that is display block and we take away the bullets
+    that show up for the list items. 
+*/
+.main-menu {
+    display:inline-block;
+    list-style: none;
 }
 
-#Main_Headshot{
-    float:right;
-    
+/*
+    We float each individual list item to the left
+    so that they will be in a line. 
+    We also give it position relative 
+*/
+.main-menu-item {
+    float:left;
+    padding-left:30px;
+    position: relative;
 }
 
-#Kavons_Bio{
+/*
+    the ">" in the css means we want the first
+    anchor element after the element that has the 
+    class "main-menu-item"
+*/
+.main-menu-item > a {
+    color:white;
+    text-decoration: none;
+    padding:20px;
+}
+
+/*
+because we have the parent element, a position 
+relative, that means we can give the child element
+a position absolute and it will be bound to where ever
+the parent is on the page. Basically, it means, if you 
+put it a top:0 and left:0 it will be right under the parent
+element and not at the top left of the entire webpage like
+usually happens when you do position absolute. 
+*/
+.submenu {
+    position: absolute;
+    list-style:none;
+    padding:15px;
+    display:none;
+    top:37px;
+    width:100px;
+}
+.submenu li {
+    padding-bottom:10px;
+}
+.submenu li a {
+    color:white;
+    text-decoration: none;
+}
+
+.container {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.show-overflow{
+    overflow:visible;
+}
+
+.bio {
+    width: 500px;
     float: left;
-    margin-top: -1200px;
-    margin-right: 62%;
-    margin-left: 5px;
-    line-height: 27px;
-    word-spacing: 3px;
-    
+    margin-right: 23px;
+    margin-left: 20px;
+}
+
+.callout-box{
+    margin-top:20px;
+    padding:30px;
+}
+
+.pull-quote{
+    float: right;
+    width: 65%;
+}
+
+.contact-form{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.contact-form form {
+    float: left;
+    width: 60%;
+    margin-right: 50px;
+}
+
+.field-group label {
+    display: block;
+}
+
+.field-group input, .field-group textarea {
+    width: 99%;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.field-group textarea {
+    height: 400px;
+}
+
+/*
+ I'll put a comment here because I'm sure if 
+ we have done this before. We can target different
+ input elements by their type. So, if you wanted
+ the input fields with type text to be different 
+ than the ones that are type number, you could 
+ do that. 
+*/
+.field-group input[type=submit] {
+    height:50px;
+    width:100%;
+}
+
+.contact-form img {
+    margin-top: 30px;
 }

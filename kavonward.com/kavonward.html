@@ -1,86 +1,139 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
     <head>
+        <!--
+            Ok, so this part is what you already know. We are adding
+            the stylesheets and the javascript files. What is 
+            different is that I added a stylesheet called "normalize.css".
+            Now, this is something that we haven't done before, but think of 
+            this as a file that sets everything to zero. All of the browers
+            have inbuilt styles that they apply automatically. The 
+            "normalize.css" is just clearing all of those inbuilt styles
+            out so that we starting fresh. I used the Google WebFonts 
+            to add some different type of fonts. You did this before
+            on another project when you were learning HTML before, but 
+            if you need a refresher, go here: https://fonts.google.com/about
 
-        <meta charset= "UTF-8">
-        <link type="text/css" rel="stylesheet" href="kavonward.css">
-        <title> Kavon Ward</title>
-    
+        -->
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:700|Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css" type="text/css" />
+        <link rel="stylesheet" href="kavonward.css" type="text/css" />
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/main.js"></script>
+
     </head>
-
-    <body>
-
-            
-            
-            <nav id="Nav">
-                    <h1> Kavon Ward</h1>
-                    <ul>
-                        <li><a href= "">HOME</a></li>
-                        <li><a href=""> ACTING</a>
-                            <ul id="Dropdown_Acting">
-                                <li><a href="">Media</a></li>
-                                <li><a href="">Resume</a></li>
-                                <li><a href="">Photos</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">SPOKEN WORD</a>
-                        <ul id="Dropdown_Spokenword">
+    <body class="gray-text">
+    <!--
+        So what I want you to notice about this stylesheet is that I use
+a lot of classes instead of Ids. Now, so far you have been using 
+Ids to target the html elements. There is nothing wrong with doing
+that, but you have more flexibilty by using classes. For example,
+we can target multiple menu items by using the .main-menu-item class. 
+The way CSS works is that the more specific style gets applied. So, 
+'#Nav ul li' is more specific that '.top-menu .main-menu .main-menu-item'.
+That is because you are SPECIFICALLY targeting the element names (ul and li).
+While the other is NOT SPECIFICALLY targeting any element. Look back through
+the HTML/CSS book if you are confused by what I just wrote. 
+The other benefit is that you can keep adding classes to elements and 
+change their style. Like, if you want to change the bar at the top of
+the page, you can just add a "orange-bg" class and boom, its done.  
+    -->
+        <div class="top-bar gray-bg">
+            <h1>Kavon Ward</h1>
+            <nav class="top-menu">
+            <!--
+            We have the same structure from the previous file
+            for the dropdown. The main difference is that we 
+            are using the classes to control the styles now. 
+            -->
+                <ul class="main-menu">
+                    <li class="main-menu-item"><a href="">Home</a></li>
+                    <li class="main-menu-item">
+                        <a href="">Acting</a>
+                        <ul class="submenu light-blue-bg">
+                            <li><a href="">Media</a></li>
+                            <li><a href="">Resume</a></li>
+                            <li><a href="">Photos</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="">Spoken Word</a>
+                        <ul class="submenu light-blue-bg">
                             <li><a href="">Media</a></li>
                             <li><a href="">Articles</a></li>
                             <li><a href="">Photos</a></li>
                             <li><a href="">Store</a></li>
                         </ul>
-                        </li>
-                        <li><a href="">VOICE-OVERS</a>
-                        <ul id="Dropdown_Voiceover">
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="">Voice Overs</a>
+                        <ul class="submenu light-blue-bg">
                             <li><a href="">Media</a></li>
                         </ul>
-                        </li>
-                        
-                        <lI><a href="">TESTIMONIALS</a></lI>
-                    </ul>
+                    </li>
+                    <li class="main-menu-item"><a href="">Testimonials</a></li>
+                </ul>
             </nav>
-
-            <div id="tableContainer_IntroPage"> 
-            
-                <section id="Main_Headshot">
-
-                    <img src= "/Users/kavonward/Documents/GitHub/Onward-Tech/kavonward.com/pics/A-Kavon HS 5.jpg" width= "100%" height= "30%" alt="Kavon Ward"> 
-
-                </section>
-                
-                
-                    <section id="Kavons_Bio">
-                    <h2>BIO</h2>
-    
-                        <p>Kavon Ward is a nationally recognized, award winning spoken word artist and poetic activist.  
-                            She recently received 1st place at the historic Apollo Theater’s Amateur Night, 
-                            shared the stage with gospel artist Hezekiah Walker and was featured in the 2013 African American Festival, 
-                            alongside artists like Patti LaBelle and Fantasia. 
+        </div>
+        <!--
+            So when you make new pages, what you will do is copy
+            all of this and then empty whatever is in this div with the
+            "container" class. You can float stuff in this,
+            put elements with "position:absolute" and they won't go
+            outside of the container's bounds. 
+            By default the style for this has a height of 500px and 
+            the overflow is hidden. If you had content that was more
+            than 500px tall then you would add classes to override the
+            overflow attribute. For example, there is an unused class
+            called "show-overflow" in the stylesheet. If had a bunch
+            of stuff that you had to put in the container div, then
+            what you would do add the "show-overflow" class to it. 
+        -->
+        <div class="container">
+            <div class="bio">
+                <p>Kavon Ward is a nationally recognized, award winning spoken word artist and poetic activist. 
+                She recently received 1st place at the historic Apollo Theater’s Amateur Night, 
+                shared the stage with gospel artist Hezekiah Walker and was featured in the 2013 African American Festival, 
+                alongside artists like Patti LaBelle and Fantasia. </p>
                             
-                            Kavon is the 2012 Paul Robeson Here I Stand Poet and opened for Common at the Lincoln Theater in this capacity. 
-                            Also in 2012, Kavon took the stage with activists like Joe Madison and Dick Gregory, to perform her piece, 
-                            “I Am TrayvonMartin,” during the Trayvon Martin – Washington DC Rally for Justice.          
-                            Kavon has also performed at the the Washington, DC Black Theater Festival, the Congressional Black Caucus Foundation’s Avoice Heritage Celebration,
-                     
-                            Kavon has been writing poetry and acting since she was a teen. 
-                            Kavon currenlty uses her many talents in Hollywood aa she further pursues an acting career.now uses her talents to motivate various audiences, particularly children in under-served communities who she encourages to use education as a means of transforming obstacles into opportunities. 
-                            Kavon holds a BA in Communications and a Masters of Public Administration.  
-                            She is a former public policy lobbyist and Congressional Black Caucus/International Franchise Association Foundations Policy Fellow.                                                                                                                                                  </p>
-                </section>
-
-                <form id= Contact>
-                        
-
-                </form>
+                <p>Kavon is the 2012 Paul Robeson Here I Stand Poet and opened for Common at the Lincoln Theater in this capacity. 
+                Also in 2012, Kavon took the stage with activists like Joe Madison and Dick Gregory, to perform her piece, 
+                “I Am TrayvonMartin,” during the Trayvon Martin – Washington DC Rally for Justice. 
+                Kavon has also performed at the the Washington, DC Black Theater Festival, 
+                the Congressional Black Caucus Foundation’s Avoice Heritage Celebration.</p>
                 
+                <p>Kavon has been writing poetry and acting since she was a teen. 
+                Kavon currenlty uses her many talents in Hollywood aa she further pursues an acting career.now uses her talents to motivate various audiences, particularly children in under-served communities who she encourages to use education as a means of transforming obstacles into opportunities. 
+                Kavon holds a BA in Communications and a Masters of Public Administration.  
+                She is a former public policy lobbyist and Congressional Black Caucus.</p>
             </div>
-            <footer id="All_Footers">
-                    &copy; 2019, Kavon Ward
-                    <br>
-                    All trademarks and registered trademarks appearing on this site are the property of their respective owners.
-            </footer>
+            <img src="pics/kavon.png" />
+        </div>
+        <div class="callout-box dark-blue-bg">
+            <img src="pics/testimonialkwbanner1.jpg" width="30%" />
+            <div class="pull-quote white-text">Occaecat sint irure quis id esse eiusmod velit Lorem. Magna adipisicing consequat id ipsum sint eiusmod amet elit enim excepteur pariatur labore. In pariatur irure eiusmod veniam. Minim minim aliqua cillum ullamco duis pariatur esse sint nostrud.Nostrud non in mollit et duis do cupidatat tempor cillum incididunt reprehenderit non ex magna.</div>
+        </div>
+        <div class="contact-form">
+            
+            <form class="form">
+                <h3>Contact</h3>
+                <div class="field-group">
+                    <label>Name</label>
+                    <input type="text" class="input" />
+                </div>
+                <div class="field-group">
+                    <label>Email</label>
+                    <input type="text" class="input" />
+                </div>
+                <div class="field-group">
+                    <label>Info</label>
+                    <textarea></textarea>
+                </div>
+                <div class="field-group">
+                    <input type="submit" class="orange-bg white-text" value="Send">
+                </div>
+            </form>
+            <img src="pics/183.jpg" />
+        </div>
     </body>
 </html>
-                
