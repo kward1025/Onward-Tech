@@ -125,6 +125,44 @@ usually happens when you do position absolute.
     overflow: hidden;
     position: relative;
 }
+.container_resume{
+    
+    color:#A1A3A1;
+    font-size: 90%;
+    text-align: left;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 80px;
+    margin-inline-end: 80px;
+    white-space: pre-wrap;
+    
+    
+}
+
+
+.res_cat{
+   background-color: #A1A3A1;
+   color: white;
+   padding:5px;
+   
+}
+   
+.res_cat_head{
+    
+    color:   #1D38BB;
+    font-weight:bolder;
+    text-align: center;
+    padding: 5px;
+    background-color: #A1A3A1;
+
+}
+.resume_pic{
+    float: left;
+    width: 100px;
+    
+    
+}
+
 
 .show-overflow{
     overflow:visible;
@@ -142,6 +180,8 @@ usually happens when you do position absolute.
     margin-left: 20px;
     color:#A1A3A1;
 }
+
+
 
 .callout-box{
     margin-top:20px;
