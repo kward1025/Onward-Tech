@@ -20,6 +20,11 @@ body{
     color:white;
 }
 
+.resume-table {
+    width: 100%;
+    text-align: center;
+}
+
 .dark-blue-bg{
     background-color: #1D38BB;
 }
@@ -144,7 +149,7 @@ usually happens when you do position absolute.
    background-color: #A1A3A1;
    color: white;
    padding:5px;
-   
+   margin-bottom: -20px;
 }
    
 .res_cat_head{
