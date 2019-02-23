@@ -73,7 +73,7 @@ body{
     that show up for the list items. 
 */
 .main-menu {
-    display:inline-block;
+    display:none;
     list-style: none;
 }
 
@@ -218,6 +218,7 @@ usually happens when you do position absolute.
 .callout-box{
     margin-top:20px;
     padding:30px;
+    display: none;
 }
 
 .pull-quote{
@@ -268,6 +269,7 @@ usually happens when you do position absolute.
 }
 
 .footer{
+    display:none;
     color:  grey;
     text-align: center;
     font-size: 90%;

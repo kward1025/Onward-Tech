@@ -42,6 +42,11 @@ $(function(){
         $(this).children('a').removeClass("dark-blue-bg");
         $(this).children('.submenu').hide();
     });
+
+
+    $('.print-button').on('click', function(){
+      window.print();  
+    });
 });
 
 var slideIndex = 1;
