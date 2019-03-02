@@ -229,6 +229,7 @@ usually happens when you do position absolute.
 .contact-form{
     padding-left: 50px;
     padding-right: 50px;
+    display: none;
 }
 
 .contact-form form {

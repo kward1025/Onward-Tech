@@ -218,6 +218,7 @@ usually happens when you do position absolute.
 .callout-box{
     margin-top:20px;
     padding:30px;
+    position: relative;
 }
 
 .pull-quote{
@@ -275,8 +276,11 @@ usually happens when you do position absolute.
     padding-top: 30px;
 }
 .slideshow-container {
-    position: relative;
-    background: #f1f1f1f1;
+    position: absolute;
+    /* background: #f1f1f1f1; */
+    width: 60%;
+    top: 0px;
+    left: 33%;
   }
   
   /* Slides */
@@ -318,7 +322,6 @@ usually happens when you do position absolute.
   .dot-container {
     text-align: center;
     padding: 20px;
-    background: #ddd;
   }
   
   /* The dots/bullets/indicators */
@@ -327,7 +330,7 @@ usually happens when you do position absolute.
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color:white;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
