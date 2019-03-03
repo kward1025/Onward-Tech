@@ -216,14 +216,19 @@ usually happens when you do position absolute.
 
 
 .callout-box{
-    margin-top:20px;
-    padding:30px;
+    margin-top: 20px;
+    padding: 30px;
     position: relative;
+    height: 200px;
 }
 
 .pull-quote{
     float: right;
     width: 65%;
+}
+
+.pull-quote h2{
+    margin-top:0px;
 }
 
 .contact-form{
@@ -279,22 +284,24 @@ usually happens when you do position absolute.
     position: absolute;
     /* background: #f1f1f1f1; */
     width: 60%;
-    top: 0px;
+    top:56px;
     left: 33%;
   }
   
   /* Slides */
   .mySlides {
     display: none;
-    padding: 80px;
+    padding: 20px;
+    margin-left: 20px;
     text-align: center;
+    margin-right: 20px;
   }
   
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 25%;
     width: auto;
     margin-top: -30px;
     padding: 16px;
@@ -321,7 +328,7 @@ usually happens when you do position absolute.
   /* The dot/bullet/indicator container */
   .dot-container {
     text-align: center;
-    padding: 20px;
+    margin-top: -17px;
   }
   
   /* The dots/bullets/indicators */
