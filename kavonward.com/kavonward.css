@@ -103,6 +103,31 @@ body{
 .col{
     flex:1;
 }
+
+.masonry-grid{
+    width:100%;
+    position: relative;
+}
+.masonry-grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+.masonry-grid-item{
+    float:left;
+}
+.masonry-grid-sizer, .masonry-grid-item {
+    width:20%;
+}
+.masonry-grid-item img{
+    max-width:100%;
+    display:block;
+}
+
+
+
+
 .resume_graph{
     margin-bottom:-30px;
 }
@@ -148,6 +173,8 @@ usually happens when you do position absolute.
     height: 500px;
     overflow: hidden;
     position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .container_resume{
     
@@ -257,7 +284,7 @@ usually happens when you do position absolute.
 
 .contact-form form {
     float: left;
-    width: 60%;
+    width: 66%;
     margin-right: 50px;
 }
 

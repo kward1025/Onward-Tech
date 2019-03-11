@@ -53,7 +53,6 @@ $(function(){
 
     showSlides(0, slides);
     $('.dot').on('click', function(evt){
-      console.log(evt);
       var n = $(this).data('slide-number');
       slideIndex = showSlides(n, slides);
     });
@@ -61,12 +60,10 @@ $(function(){
     $('.prev').on('click', minusSlides)
     function plusSlides() {
       slideIndex = showSlides(slideIndex += 1, slides);
-      console.log(slideIndex);
     }
 
     function minusSlides() {
       slideIndex = showSlides(slideIndex -= 1, slides);
-      console.log(slideIndex);
     }
 
     function showSlides(n, slides) {
@@ -88,4 +85,47 @@ $(function(){
     setInterval(function(){
       plusSlides()
     }, 2000);
+
+    var $grid = $('.masonry-grid').masonry({
+      itemSelector: '.masonry-grid-item',
+      percentPosition: true,
+      columnWidth: '.masonry-grid-sizer'
+    });
+
+    $grid.imagesLoaded().progress(function(){
+      $grid.masonry();
+    });
+
+    
 });
+console.log();
+function onYouTubeIframeAPIReady(){
+
+  // The first argument of YT.Player is an HTML element ID. YouTube API will replace my <div id="player"> tag with an iframe containing the youtube video.
+  new YT.Player('vid1', {
+      width: document.getElementById('vid1').offsetWidth -20,
+      videoId : '6Dc1C77nra4'
+  });
+  new YT.Player('vid2', {
+    width: document.getElementById('vid2').offsetWidth - 20,
+    videoId : '6Dc1C77nra4'
+  });
+  new YT.Player('vid3', {
+    width: document.getElementById('vid3').offsetWidth - 20,
+    videoId : '6Dc1C77nra4'
+  });
+
+  // The first argument of YT.Player is an HTML element ID. YouTube API will replace my <div id="player"> tag with an iframe containing the youtube video.
+  new YT.Player('vid4', {
+    width: document.getElementById('vid4').offsetWidth -20,
+    videoId : '6Dc1C77nra4'
+});
+new YT.Player('vid5', {
+  width: document.getElementById('vid5').offsetWidth - 20,
+  videoId : '6Dc1C77nra4'
+});
+new YT.Player('vid6', {
+  width: document.getElementById('vid6').offsetWidth - 20,
+  videoId : '6Dc1C77nra4'
+});
+}
