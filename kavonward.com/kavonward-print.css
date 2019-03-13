@@ -2,6 +2,7 @@ body{
     padding:0px;
     margin:0px;
     font-family: 'Raleway', sans-serif;
+    font-size: 12px;
 }
 
 .gray-bg {
@@ -53,6 +54,10 @@ body{
     font-family: 'Oxygen', sans-serif;
     padding-top: 7px;
     padding-left: 10px;
+    display:none;
+    margin: 0px;
+    float:left;
+    color:white;
 }
 
 .selected{
@@ -60,11 +65,6 @@ body{
     background-color: #245CB0;
 }
 
-.top-bar h1 {
-    margin:0px;
-    float:left;
-    color:white;   
-}
 
 /*
     So a quick word about the menu stuff. 
@@ -146,10 +146,22 @@ usually happens when you do position absolute.
 
 
 .res_cat{
-   background-color: #A1A3A1;
+   
    color: white;
-   padding:5px;
-   margin-bottom: -20px;
+   padding:0px;
+   margin-bottom: -25px;
+   text-decoration: underline;
+   text-decoration-color: black;
+}
+
+.res_cat > p:first-child{
+    margin-top:0px;
+    padding-top:0px;
+}
+
+.res_cat + div{
+    margin-top:-20px;
+    margin-bottom:-30px;
 }
    
 .res_cat_head{
@@ -157,7 +169,8 @@ usually happens when you do position absolute.
     color: white;
     font-weight:bolder;
     padding: 5px;
-    background-color: #A1A3A1;
+    
+    border-bottom: #A1A3A1 solid 3px;
 
 }
 .resume_pic{
@@ -170,18 +183,19 @@ usually happens when you do position absolute.
     font-size:0.75em;
     color:#bc0000;
     cursor: pointer;
+    display: none;
 }
 
 .bio-blurb{
-    width: 40%;
+    width: 60%;
     position: absolute;
-    top: 0px;
+    top: -40px;
     left: 40%;
 }
 .bio-container{
    position:relative; 
-   border-top: 0.4em solid #999;
-   border-bottom: 0.4em solid #999;
+   border-top: none;
+   border-bottom: none;
    background-color: lightgray;
    color:white;
 }
